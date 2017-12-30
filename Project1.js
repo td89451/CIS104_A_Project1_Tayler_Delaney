@@ -7,15 +7,8 @@
 "use strict";
 const PROMPT = require('readline-sync');
 
-let lotNumber;
-let bedroomCount;
-let bathroomCount;
-let garageSize;
-let total;
-const basePrice = 50000;
-const bedroomPrice = 17000;
-const bathroomPrice = 12500;
-const perCarPrice = 6000;
+let lotNumber, bedroomCount, bathroomCount, garageSize, total;
+const BASE_PRICE = 50000, BEDROOM_PRICE = 17000, BATHROOM_PRICE = 12500, PER_CAR_PRICE = 6000;
 
 function main() {
     setLotNumber();
@@ -43,7 +36,7 @@ function setGarageSize() {
     garageSize = PROMPT.question('\nPlease enter desired size of garage: ');
 }
 function calcFinalPrice () {
-    total = basePrice + bedroomPrice*bedroomCount + bathroomPrice*bathroomCount + garageSize*perCarPrice;
+    total = BASE_PRICE + BEDROOM_PRICE*bedroomCount + BATHROOM_PRICE*bathroomCount + PER_CAR_PRICE*garageSize;
 }
 
 function printResults() {
