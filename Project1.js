@@ -41,5 +41,5 @@ function calcFinalPrice () {
 
 function printResults() {
     process.stdout.write('\x1Bc'); //Clears the screen
-    console.log("\nIt will cost $" + total + " to build your house at lot number " + lotNumber + ".");
+    console.log(`\nIt will cost \$${total} to build your house at lot number ${lotNumber}.`);
 }
