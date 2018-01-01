@@ -8,7 +8,6 @@
 const PROMPT = require('readline-sync');
 
 let lotNumber, bedroomCount, bathroomCount, garageSize, total;
-const BASE_PRICE = 50000, BEDROOM_PRICE = 17000, BATHROOM_PRICE = 12500, PER_CAR_PRICE = 6000;
 
 /**
  * @method
@@ -68,6 +67,7 @@ function setGarageSize() {
  * @returns {null}
  */
 function calcFinalPrice () {
+    const BASE_PRICE = 50000, BEDROOM_PRICE = 17000, BATHROOM_PRICE = 12500, PER_CAR_PRICE = 6000;
     total = BASE_PRICE + BEDROOM_PRICE*bedroomCount + BATHROOM_PRICE*bathroomCount + PER_CAR_PRICE*garageSize;
 }
 
